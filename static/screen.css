@@ -2,6 +2,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monda&family=Yellowtail&display=swap');
 
-#header{
-    background-color: aquamarine;
+
+div {
+  outline: 2px rgba(255,0,0,0.1) solid;
+}
+
+body{
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-color: white;
+  background-size: 400%, 400%;
+  background-attachment: fixed;
+  -webkit-animation: change 10s ease-in-out infinite;
+  animation: change 10s ease-in-out infinite;
+  overflow: hidden;
+  font-family: 'Monda', sans-serif;
+  margin: 0;
+}
+
+@-webkit-keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

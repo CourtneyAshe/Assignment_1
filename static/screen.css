@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda&family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
-div {
+/*div {
   outline: 2px rgba(255,0,0,0.1) solid;
-}
+}*/
 
 #header{
   background-color: rgba(106, 233, 255, 0.582);
@@ -43,6 +43,29 @@ h2{
   padding-top:0.05em;
   padding-bottom:0.05em;
   color:#414ac5;
+}
+
+/* button*/
+
+.btn-generate{
+  background-color: rgb(0, 119, 255);
+  border:3px solid rgb(1, 28, 87);
+  border-radius: 5px;
+  color:rgb(0, 177, 221);
+  cursor:pointer;
+  display:inline-block;
+  font-size:1.5em;
+  padding:0 10px 2px 10px;
+  transition: background-color 0.5s;
+  transition:color 0.5s;
+}
+
+.btn-generate:hover{
+  color:rgb(0, 247, 255);
+  background-color:rgb(0, 70, 221);
+  text-decoration: none;
+  transition: background-color 0.5s;
+  transition:color 0.5s;
 }
 
 @keyframes change {

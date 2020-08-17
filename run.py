@@ -1,49 +1,53 @@
 from flask import Flask, render_template, g
-import sqlite3
+import sqlite3, random
 
 app = Flask(__name__)
-MENUDB = 'menu.db'
+GENERATORDB = 'gen.db'
 
 @app.route('/')
 def index():
 
-    db = sqlite3.connect(MENUDB)
+    db = sqlite3.connect(GENERATORDB)
 
-    genres = []
-    cur = db.execute('SELECT genre FROM Genres')
-    for row in cur:
-        genres.append(list(row))
+    #Grab random variable from each category, accessible from the index, through clicking a button.
 
-    aesthetics = []
-    cur = db.execute('SELECT aesthetic FROM Aesthetics')
-    for row in cur:
-        aesthetics.append(list(row))
-    
-    characters = []
-    cur = db.execute('SELECT character FROM Characters')
-    for row in cur:
-        characters.append(list(row))
-
-    goals = []
-    cur = db.execute('SELECT goal FROM Goals')
-    for row in cur:
-        goals.append(list(row))
-
-    mechanics = []
+    mec = []
     cur = db.execute('SELECT mechanic FROM Mechanics')
     for row in cur:
-        mechanics.append(list(row))
+        mec.append(list(row))
 
-    adjectives = []
+    adj = []
     cur = db.execute('SELECT adjective FROM Adjectives')
     for row in cur:
-        adjectives.append(list(row))
+        adj.append(list(row))
+
+    aes = []
+    cur = db.execute('SELECT aesthetic FROM Aesthetics')
+    for row in cur:
+        aes.append(list(row))
+
+    goal = []
+    cur = db.execute('SELECT goal FROM Goals')
+    for row in cur:
+        goal.append(list(row))
+
+    char = []
+    cur = db.execute('SELECT character FROM Characters')
+    for row in cur:
+        char.append(list(row))
+
+    genre = []
+    cur = db.execute('SELECT genre FROM Genres')
+    for row in cur:
+        genre.append(list(row))
 
     return render_template('index.html',
-    genres=genres,
-    adjectives=adjectives,
-    aesthetics=aesthetics,
-    characters=characters,
-    goals=goals,
-    mechanics=mechanics
+    adjectives=adj,
+    mechanics=mec,
+    aesthetics=aes,
+    characters=char,
+    goals=goal,
+    genres=genre
     )
+        
+    

@@ -5,8 +5,9 @@ app = Flask(__name__)
 GENERATORDB = 'gen.db'
 
 @app.route('/')
+    
+def randomiser():
 
-def index():
     db = sqlite3.connect(GENERATORDB)
 
     mec = []
@@ -39,17 +40,33 @@ def index():
     for row in cur:
         genre.append(list(row))
 
+    Rchar = random.choice(char)
+    Rchar2 = random.choice(char)
+
+    if Rchar2 == Rchar:
+        Rchar2 = random.choice(char)
+    else:
+        Rchar2 = Rchar2
     
+    Radj = random.choice(adj)
+    Radj2 = random.choice(adj)
+    if Radj2 == Radj:
+        Radj2 = random.choice(adj)
+    else:
+        Radj2 = Radj2
+
+    Rmec = random.choice(mec)
+    Rmec2 = random.choice(mec)
+    if Rmec2 == Rmec:
+        Rmec2 = random.choice(mec)
+    else:
+        Rmec2 = Rmec2
+
+
     Raes = random.choice(aes)
     Rgoal = random.choice(goal)
     Rgenre = random.choice(genre)
-    Radj = random.choice(adj)
-    Rmec = random.choice(mec)
-    Rchar = random.choice(char)
-    Radj2 = random.choice(adj)
-    Rmec2 = random.choice(mec)
-    Rchar2 = random.choice(char)
-
+    
 
     return render_template('index.html',
     
@@ -64,12 +81,3 @@ def index():
     Rchar2 = Rchar2
     )
 
-def generate():
-
-    
-
-    
-
-
-        
-    

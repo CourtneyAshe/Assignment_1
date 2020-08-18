@@ -5,11 +5,9 @@ app = Flask(__name__)
 GENERATORDB = 'gen.db'
 
 @app.route('/')
+
 def index():
-
     db = sqlite3.connect(GENERATORDB)
-
-    #Grab random variable from each category, accessible from the index, through clicking a button.
 
     mec = []
     cur = db.execute('SELECT mechanic FROM Mechanics')
@@ -41,13 +39,37 @@ def index():
     for row in cur:
         genre.append(list(row))
 
+    
+    Raes = random.choice(aes)
+    Rgoal = random.choice(goal)
+    Rgenre = random.choice(genre)
+    Radj = random.choice(adj)
+    Rmec = random.choice(mec)
+    Rchar = random.choice(char)
+    Radj2 = random.choice(adj)
+    Rmec2 = random.choice(mec)
+    Rchar2 = random.choice(char)
+
+
     return render_template('index.html',
-    adjectives=adj,
-    mechanics=mec,
-    aesthetics=aes,
-    characters=char,
-    goals=goal,
-    genres=genre
+    
+    Radj = Radj,
+    Rmec = Rmec,
+    Raes = Raes,
+    Rchar = Rchar,
+    Rgoal = Rgoal,
+    Rgenre = Rgenre,
+    Radj2 = Radj2,
+    Rmec2 = Rmec2,
+    Rchar2 = Rchar2
     )
+
+def generate():
+
+    
+
+    
+
+
         
     

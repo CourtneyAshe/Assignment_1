@@ -69,7 +69,6 @@ def randomiser():
     
     idea = str("A " + Rgenre[0] +" Game in the style of " + Raes[0] + ", where a " + Radj[0] + " " + Rchar[0] + " uses " + Rmec[0] + " and " + Rmec2[0] + " to " + Rgoal[0] + " the " + Radj2[0] + " " + Rchar2[0] + ".")
 
-#A {{Rgenre[0]}} Game in the style of {{Raes[0]}}, where a {{Radj[0]}} {{Rchar[0]}} uses {{Rmec[0]}} and {{Rmec2[0]}} to {{Rgoal[0]}} the {{Radj2[0]}} {{Rchar2[0]}}.
     return render_template('index.html',
     
     

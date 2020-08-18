@@ -67,17 +67,12 @@ def randomiser():
     Rgoal = random.choice(goal)
     Rgenre = random.choice(genre)
     
+    idea = str("A " + Rgenre[0] +" Game in the style of " + Raes[0] + ", where a " + Radj[0] + " " + Rchar[0] + " uses " + Rmec[0] + " and " + Rmec2[0] + " to " + Rgoal[0] + " the " + Radj2[0] + " " + Rchar2[0] + ".")
 
+#A {{Rgenre[0]}} Game in the style of {{Raes[0]}}, where a {{Radj[0]}} {{Rchar[0]}} uses {{Rmec[0]}} and {{Rmec2[0]}} to {{Rgoal[0]}} the {{Radj2[0]}} {{Rchar2[0]}}.
     return render_template('index.html',
     
-    Radj = Radj,
-    Rmec = Rmec,
-    Raes = Raes,
-    Rchar = Rchar,
-    Rgoal = Rgoal,
-    Rgenre = Rgenre,
-    Radj2 = Radj2,
-    Rmec2 = Rmec2,
-    Rchar2 = Rchar2
+    
+    idea = idea
     )
 

@@ -71,7 +71,7 @@ def randomiser():
 
     return render_template('index.html',
     
-    
     idea = idea
+    
     )
 

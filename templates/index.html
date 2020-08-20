@@ -5,20 +5,36 @@
 {% block content%}
 
     <div id="header">
-
+      
       <h1>Game Idea Generator</h1>
-      <h2>Click the button to generate a quick and dirty game idea</h2>
-      <em>Treat it like a game jam, make it quick, have fun doing it, great for practicing your game dev skills!</em>
+      
+    </div>
 
-      <form action="/generate/">
-        <input type="submit" value="Click Here!"/>
-      </form>
+      <body>
 
-      <p>{{idea}}</p>
+        
+        <em>Treat it like a game jam, make it quick, have fun doing it, great for practicing your game dev skills!</em>
+        <h2>Click the button to generate a quick and dirty game idea</h2>
+        
+
+        <form action="/generate/">
+          <input type="submit" value="Click Here!" class="btn-generate"/>
+        </form>
+
+        <div class = "idea">
+          
+          <p>{{idea}}</p>
+        
+        </div>
+
+     
+
+      
       
       <!--Foreach entry in list apply random animation
       have a list with entries for preallocated words, insert random words into empty categories.-->
-    </div>
+
+    </body>
 
 
 

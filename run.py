@@ -4,9 +4,9 @@ import sqlite3, random
 app = Flask(__name__)
 GENERATORDB = 'gen.db'
 
-@app.route('/')
+@app.route('/generate')
     
-def randomiser():
+def generate():
 
     db = sqlite3.connect(GENERATORDB)
 

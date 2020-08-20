@@ -4,11 +4,20 @@ import sqlite3, random
 app = Flask(__name__)
 GENERATORDB = 'gen.db'
 
-@app.route('/generate')
+
+@app.route('/')
+
+def index():
+
+    return render_template('index.html')
+
+@app.route('/generate/')
     
 def generate():
 
     db = sqlite3.connect(GENERATORDB)
+
+    #idea = []
 
     mec = []
     cur = db.execute('SELECT mechanic FROM Mechanics')
@@ -74,4 +83,6 @@ def generate():
     idea = idea
     
     )
+
+
 

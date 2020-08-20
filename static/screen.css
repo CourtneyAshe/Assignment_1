@@ -55,6 +55,12 @@ em{
   
 }
 
+p{
+  font-size:2em;
+  color: #1c2058;
+  font-weight: 700;
+}
+
 /* button*/
 
 .btn-generate{

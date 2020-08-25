@@ -5,9 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap');
 
-div {
-  outline: 2px rgba(255,0,0,0.1) solid;
-}
 
 #header{
   
@@ -19,7 +16,6 @@ div {
 
 body{
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-  background: url("https://unsplash.com/photos/FEQEQrF5M10") no-repeat fixed center / cover;
   background-color: white;
   background-size: 400%, 400%;
   background-attachment: fixed;
@@ -32,27 +28,49 @@ body{
 
 
 h1{
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  
+  color: #FFF;
+  text-align: center;
+  font-family: 'Alegreya',serif;
   font-size: 6em;
-  text-align: center;
-  color:#1c2058;
-  -webkit-text-stroke: #E73C7E;
-}
-
-h2{
-  font-size: 2.5em;
-  text-align: center;
-  padding-top:0.05em;
-  padding-bottom:0.05em;
-  color:#414ac5;
+  letter-spacing: 10px;
+  
+  margin-top: -60px;
+  padding-left: 10px;
 }
 
 em{
-  
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+
   font-size:2em;
   text-align: center;
   margin-top:-10px;
   
 }
+
+h2{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  
+  color: rgb(39, 2, 88);
+  text-align: center;
+  font-family: 'Amatic',serif;
+  font-size: 2.5em;
+  
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+
 
 .idea{
   padding-left:150px;
@@ -69,6 +87,10 @@ p{
 /* button*/
 
 .btn-generate{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  right: 0;
   background-color: rgb(0, 119, 255);
   border:3px solid rgb(1, 28, 87);
   border-radius: 5px;

@@ -1,29 +1,7 @@
 /*-- Import Fonts --*/
 @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 
-
-
-.content{
-  background-color: rgba(255, 255, 255, 0.795);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#header{
-  top:-10px;
-  text-align: center;
-  font-family: 'Rubik', sans-serif;
-  font-size: 3em;
-  display: inline-block;
-  
-}
-
-#description{
-  font-size:2em;
-  text-align: center;
-  margin:20px;
-  display: inline-block;
-}
+* { border: 1px solid black; }
 
 body{
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
@@ -31,47 +9,40 @@ body{
   background-size: 400%, 400%;
   background-attachment: fixed;
   animation: change 10s ease-in-out infinite;
-  overflow: hidden;
-  font-family: 'Rubik', sans-serif;
-  display: inline-block;
   
 }
 
-.hexagon {
-  position: relative;
-  width: 100px; 
-  height: 57.74px;
-  background-color: #64C7CC;
-  margin: 28.87px 0;
+.content{
+  font-family: 'Rubik', sans-serif;
+  background-color: rgba(255, 255, 255, 0.795);
 }
 
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+#title{
+  font-family: inherit;
+  font-size: 4em;
+  text-align: center;
 }
 
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 28.87px solid #64C7CC;
+#description{
+  font-family: inherit;
+  font-size:2em;
+  text-align: center;
 }
 
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 28.87px solid #64C7CC;
+p{
+  font-family: inherit;
+  font-size:2em;
+  text-align: center;
 }
-
-
-
 /*-- Button --*/
 /*https://codepen.io/SamoSoviet/pen/YwMLQg*/
 
-
+.gen-btn{
+  align-self: center;
+  color:red;
+}
 .btn-generate {
+  align-self: center;
 	border: none;
 	font-family: inherit;
 	font-size: 2em;
@@ -79,16 +50,13 @@ body{
 	background: none;
 	cursor: pointer;
 	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
 	outline: none;
-	position: relative;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .btn:after {
@@ -122,6 +90,9 @@ body{
 	box-shadow: 0 0 #16385e;
 	top: 6px;
 }
+
+
+
 
 /*-- KeyFrames --*/
 

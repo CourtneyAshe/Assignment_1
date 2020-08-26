@@ -1,17 +1,28 @@
-/* Google font imports */
-
-@import url('https://fonts.googleapis.com/css2?family=Monda&family=Yellowtail&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap');
+/*-- Import Fonts --*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 
 
+
+.content{
+  background-color: rgba(255, 255, 255, 0.795);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #header{
-  
-  padding-top: 5px;
-  padding-bottom: 5px;
+  top:-10px;
   text-align: center;
-  font-family: 'Alegreya', serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 3em;
+  display: inline-block;
+  
+}
+
+#description{
+  font-size:2em;
+  text-align: center;
+  margin:20px;
+  display: inline-block;
 }
 
 body{
@@ -19,97 +30,100 @@ body{
   background-color: white;
   background-size: 400%, 400%;
   background-attachment: fixed;
-  -webkit-animation: change 10s ease-in-out infinite;
   animation: change 10s ease-in-out infinite;
-  margin: 0;
-  text-align: center;
-  font-family: 'Amatic', serif;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+  display: inline-block;
+  
 }
 
+.hexagon {
+  position: relative;
+  width: 100px; 
+  height: 57.74px;
+  background-color: #64C7CC;
+  margin: 28.87px 0;
+}
 
-h1{
+.hexagon:before,
+.hexagon:after {
+  content: "";
   position: absolute;
-  top: 25%;
-  left: 0;
-  right: 0;
-  
-  color: #FFF;
-  text-align: center;
-  font-family: 'Alegreya',serif;
-  font-size: 6em;
-  letter-spacing: 10px;
-  
-  margin-top: -60px;
-  padding-left: 10px;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
 }
 
-em{
-  position: absolute;
-  top: 35%;
-  left: 0;
-  right: 0;
-
-  font-size:2em;
-  text-align: center;
-  margin-top:-10px;
-  
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 28.87px solid #64C7CC;
 }
 
-h2{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  
-  color: rgb(39, 2, 88);
-  text-align: center;
-  font-family: 'Amatic',serif;
-  font-size: 2.5em;
-  
-  margin-top: -60px;
-  padding-left: 10px;
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.87px solid #64C7CC;
 }
 
 
 
-.idea{
-  padding-left:150px;
-  padding-right:150px;
-  animation: idea 1.25s ease-in-out;
+/*-- Button --*/
+/*https://codepen.io/SamoSoviet/pen/YwMLQg*/
+
+
+.btn-generate {
+	border: none;
+	font-family: inherit;
+	font-size: 2em;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
-p{
-  font-size:2em;
-  color: #1c2058;
-  font-weight: 700;
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
-/* button*/
-
-.btn-generate{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  right: 0;
-  background-color: rgb(0, 119, 255);
-  border:3px solid rgb(1, 28, 87);
-  border-radius: 5px;
-  color:rgb(0, 177, 221);
-  cursor:pointer;
-  display:inline-block;
-  font-size:1.5em;
-  padding:0 10px 2px 10px;
-  transition: background-color 0.5s;
-  transition:color 0.5s;
+.btn-2 {
+	background: #2a609e;
+	color: #fff;
+	box-shadow: 0 6px #16385e;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
 }
 
-.btn-generate:hover{
-  color:rgb(0, 247, 255);
-  background-color:rgb(0, 70, 221);
-  text-decoration: none;
-  transition: background-color 0.5s;
-  transition:color 0.5s;
+.btn-2c {
+	border-radius: 5px;
 }
+
+.btn-2c:hover {
+	box-shadow: 0 4px #16385e;
+	top: 2px;
+}
+
+.btn-2c:active {
+	box-shadow: 0 0 #16385e;
+	top: 6px;
+}
+
+/*-- KeyFrames --*/
 
 @keyframes change {
   0% {
@@ -120,19 +134,5 @@ p{
   }
   100% {
     background-position: 0 50%;
-  }
-}
-
-@keyframes idea{
-  0%{
-    transform:scale(0.9);
-  }
-
-  50%{
-    transform:scale(1.1);
-  }
-
-  0%{
-    transform:scale(0.9);
   }
 }

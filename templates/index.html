@@ -2,42 +2,35 @@
 
 {%extends "base.html"%}
 
+
 {% block content%}
 
-    <div id="header">
+
+
+<div class="content">
+
+  <div id="header">
       
-      <h1>Game Idea Generator</h1>
-      
-    </div>
+    <h1>Game Idea Generator</h1>
+    
+  </div>
+  
+  <h2 id="description">Do you want to practice your game design skills but are struggling to come up with a game idea? Then this is the place for you! Just click the button below to generate a random game idea, 
+    treat it like a game jam! Make it quick, have fun doing it and practice those game dev skills! 
+  </h2>
 
-      <body>
+  
+  <em>Remember! It doesn't need to be perfect! We're not going for any awards here!</em>
 
-        
-        <em>Treat it like a game jam, make it quick, have fun doing it, great for practicing your game dev skills!</em>
-        <h2>Click the button to generate a quick and dirty game idea</h2>
-        
+  <form action="/generate/">
+    <input type="submit" value="Click Here!" class="btn-generate btn-2 btn-2c"/>
 
-        <form action="/generate/">
-          <input type="submit" value="Click Here!" class="btn-generate"/>
-        </form>
-
-        <div class = "idea">
-          
-          <p>{{idea}}</p>
-        
-        </div>
-
-     
-
-      
-      
-      <!--Foreach entry in list apply random animation
-      have a list with entries for preallocated words, insert random words into empty categories.-->
-
-    </body>
-
-
-
-
+    
+  <div class = "idea">
+    
+    <p>{{idea}}</p>
+  
+  </div>
+</div>
 
 {% endblock %}

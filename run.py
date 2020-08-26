@@ -17,8 +17,6 @@ def generate():
 
     db = sqlite3.connect(GENERATORDB)
 
-    #idea = []
-
     mec = []
     cur = db.execute('SELECT mechanic FROM Mechanics')
     for row in cur:
@@ -83,6 +81,5 @@ def generate():
     idea = idea
     
     )
-
 
 

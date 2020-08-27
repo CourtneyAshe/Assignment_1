@@ -1,51 +1,66 @@
 /*-- Import Fonts --*/
-@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
+/* { border: 1px solid black; } */
 
-* { border: 1px solid black; }
-
+*{
+	margin:auto;
+	
+}
 body{
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-  background-color: white;
-  background-size: 400%, 400%;
-  background-attachment: fixed;
-  animation: change 10s ease-in-out infinite;
-  
+	padding:50px 5em;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-color: white;
+	background-size: 400%, 400%;
+	background-attachment: fixed;
+	animation: change 10s ease-in-out infinite;
 }
 
 .content{
-  font-family: 'Rubik', sans-serif;
-  background-color: rgba(255, 255, 255, 0.795);
+	font-family: 'Quicksand', sans-serif;
+	background-color: rgba(255, 255, 255, 0.774);
+	border-radius: 25px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 #title{
-  font-family: inherit;
-  font-size: 4em;
-  text-align: center;
+	padding:20px 0;
+	position: relative;
+	font-family: 'Amatic SC', cursive;
+	font-size: 8.5rem;
+	text-align: center;
+	text-decoration: underline;
 }
+
 
 #description{
-  font-family: inherit;
-  font-size:2em;
-  text-align: center;
+	padding-top:30px;
+	font-family: inherit;
+	font-size:1.8em;
+  	text-align: center;
 }
 
-p{
-  font-family: inherit;
-  font-size:2em;
-  text-align: center;
+.idea{
+	padding-top:50px;
+	padding-bottom: 50px;
+	font-family: inherit;
+	font-size:2.2em;
+	text-align: center;
+	color:blue;
 }
+
 /*-- Button --*/
 /*https://codepen.io/SamoSoviet/pen/YwMLQg*/
 
-.gen-btn{
-  align-self: center;
-  color:red;
+.btn{
+	text-align: center;
+	padding-top:100px;
+	padding-bottom: 50px;
 }
 .btn-generate {
-  align-self: center;
-	border: none;
 	font-family: inherit;
-	font-size: 2em;
+	font-size: 1.2em;
 	color: inherit;
 	background: none;
 	cursor: pointer;
@@ -54,14 +69,15 @@ p{
 	letter-spacing: 1px;
 	font-weight: 700;
 	outline: none;
+	position: relative;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-  transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .btn:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	z-index: -1;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -91,19 +107,48 @@ p{
 	top: 6px;
 }
 
-
-
-
 /*-- KeyFrames --*/
 
 @keyframes change {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
 }
+
+/*-- Media Queries --*/
+
+@media only screen and (max-width:720px){
+	
+	body{animation:none;
+	padding:10px 10px;}
+
+	#title{
+		font-size:5em;
+	}
+
+	#description{
+		font-size:1.5em;
+		padding:10px;
+	}
+
+	.idea{
+		font-size:1.5em;
+		padding:1px;
+	}
+
+	.btn{
+		padding-top:30px;
+	  	padding-bottom: 15px;
+	}
+
+	.btn-generate{
+		padding: 15px 60px;
+	}
+
+  }

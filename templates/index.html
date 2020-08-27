@@ -2,27 +2,34 @@
 
 {%extends "base.html"%}
 
+{% block title%}Random Game Idea Generator{% endblock%}
 
 {% block content%}
 
 
 
 <div class="content">
-      
-  <h1 id="title">Game Idea Generator</h1>
+    
+  <h1 id="title"><span>Game Idea Generator</span></h1>
 
   <h2 id="description">Do you want to practice your game design skills but are struggling to come up with a game idea? Then this is the place for you! Just click the button below to generate a random game idea, 
     treat it like a game jam! Make it quick, have fun doing it and practice those game dev skills! 
   </h2>
 
-  <form action="/generate/" class="gen-btn">
-    <input type="submit" value="Click Here!" class="btn-generate btn-2 btn-2c"/>
+  <form action="/generate/">
+    <div class="btn">
+      <input type="submit" value="Click Here!" class="btn-generate btn-2 btn-2c"/>
+    </div>
     
-  <div class = "idea">
-    
-    <p>{{idea}}</p>
+    <div class = "idea">
   
-  </div>
+      <p>{{idea}}</p>
+    
+    </div>
 </div>
+
+    
+  
+
 
 {% endblock %}
